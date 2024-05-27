@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Result</title>
+</head>
+<body>
+    <h2>Query Result</h2>
+    <div class="large-scroll">
+        <table>
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Country Name</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Location Name</th>
+                    <th style="border: 1px solid #000;">Latitude</th>
+                    <th style="border: 1px solid #000;">Longitude</th>
+                    <th style="border: 1px solid #000;">Time Zone</th>
+                    <th style="border: 1px solid #000;">Last Updated Epoch</th>
+                    <th style="border: 1px solid #000;">Last Updated Time</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Temperature Celsius</th>
+                    <th style="border: 1px solid #000;">Temperature Fahrenheit</th>
+                    <th style="border: 1px solid #000;">Condition Text</th>
+                    <th style="border: 1px solid #000;">Precip. in</th>
+                    <th style="border: 1px solid #000;">Precip. nm</th>
+                    <th style="border: 1px solid #000;">Humidity</th>
+                    <th style="border: 1px solid #000;">Cloud</th>
+                    <th style="border: 1px solid #000;">Feels Like Celsius</th>
+                    <th style="border: 1px solid #000;">Feels Like Fahrenheit</th>
+                    <th style="border: 1px solid #000;">Visibility km</th>
+                    <th style="border: 1px solid #000;">Visibility Mile</th>
+                    <th style="border: 1px solid #000;">UV Index</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Wind mph</th>
+                    <th style="border: 1px solid #000;">Wind kph</th>
+                    <th style="border: 1px solid #000;">Wind Degree</th>
+                    <th style="border: 1px solid #000;">Wind Direction</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Gust mph</th>
+                    <th style="border: 1px solid #000;">Gust kph</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Pressure mb</th>
+                    <th style="border: 1px solid #000;">Pressure in</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Carbon Monoxide</th>
+                    <th style="border: 1px solid #000;">Ozone</th>
+                    <th style="border: 1px solid #000;">Nitrogen Dioxide</th>
+                    <th style="border: 1px solid #000;">Sulphur Dioxide</th>
+                    <th style="border: 1px solid #000;">PM 2.5</th>
+                    <th style="border: 1px solid #000;">PM 10</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">GB DEFRA Index</th>
+                    <th style="border: 1px solid #000;">US EPA Index</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Moonrise</th>
+                    <th style="border: 1px solid #000;">Moonset</th>
+                    <th style="border: 1px solid #000;">Moon Phase</th>
+                    <th style="border: 1px solid #000;">Moon Illumination</th>
+                    <th style="border: 1px solid #000;">ID</th>
+                    <th style="border: 1px solid #000;">Sunrise</th>
+                    <th style="border: 1px solid #000;">Sunset</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in result %}
+                <tr>
+                   <td style="border: 1px solid #000;">{{ row[0] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[1] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[2] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[3] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[4] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[5] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[6] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[7] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[8] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[9] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[10] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[11] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[12] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[13] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[14] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[15] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[16] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[17] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[18] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[19] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[20] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[21] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[22] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[23] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[24] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[25] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[26] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[27] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[28] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[29] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[30] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[31] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[32] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[33] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[34] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[35] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[36] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[37] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[38] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[39] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[40] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[41] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[42] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[43] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[44] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[45] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[46] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[47] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[48] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[49] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[50] }}</td>
+                    <td style="border: 1px solid #000;">{{ row[51] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

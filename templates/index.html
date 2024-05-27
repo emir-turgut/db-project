@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask MySQL Scrollbar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .scrollbar {
+            width: 250px;
+            height: 400px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            float: left;
+            margin-right: 20px;
+        }
+        .selected-location {
+            color: red; /* Change the color as desired */
+        }
+        .large-scroll {
+            width: 100%;
+            height: 500px; /* Adjust the height as needed */
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollbar" id="countries">
+        <h3>Countries</h3>
+        <ul>
+            {% for country in countries %}
+            <li><a href="/select?country={{ country[0] }}">{{ country[0] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="scrollbar" id="locations">
+        <h3>Locations</h3>
+        <ul id="location-list">
+            {% for location in locations %}
+            <li><a href="/select_location?location={{ location[0] }}">{{ location[0] }}</a></li>
+            {% endfor %}
+            {% if selected_location %}
+            <li><span class="selected-location">{{ selected_location }}</span></li>
+            {% endif %}
+        </ul>
+    </div>
+    <form action="/query_location" method="post">
+        <button type="submit">Query</button>
+    </form>
+    <div class="large-scroll">
+    </div>
+</body>
+</html>
